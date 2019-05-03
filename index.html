@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>Thermostat</title>
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="./src/thermostat.js"></script>
     <link rel="stylesheet" href="skeleton.css">
 
   </head>
   <body>
     <section>
-      <h1 id="temperature">Temperature</h1>
+      <h1 id="temperature"></h1>
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
@@ -17,9 +17,25 @@
         <button id="powersaving-on">Toggle Power Saving Mode</button>
       </p>
     </section>
-
-    <script>
-      </script>
-
   </body>
 </html>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script>
+
+$( function() {
+
+  var thermostat = new Thermostat();
+
+  $('#temperature').text(thermostat.temp + '°C');
+
+  $('#temperature-up').on('click', function() {
+    thermostat.up();
+    $('#temperature').text(thermostat.temp + '°C');
+  });
+
+
+
+});
+
+</script>
