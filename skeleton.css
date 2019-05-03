@@ -124,7 +124,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Dosis', sans-serif;
   color: #222;
   text-align: center;
   }
@@ -177,7 +177,8 @@ input[type="button"] {
   padding: 0 30px;
   color: #555;
   text-align: center;
-  font-size: 11px;
+  font-size: 20px;
+  font-family: 'Dosis', sans-serif;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -223,6 +224,18 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
+
+.button1 {
+  background-color: #ff6549;
+  font-size: 20px;
+
+}
+
+.button2 {
+  background-color: #b3c7ff;
+  font-size: 20px;
+}
+
 
 
 /* Forms
