@@ -41,6 +41,11 @@ $( function() {
     $('#temperature').text(thermostat.temp + '°C');
   });
 
+  $('#temperature-reset').on('click', function() {
+    thermostat.reset();
+    $('#temperature').text(thermostat.temp + '°C');
+  });
+
 
 
 });
