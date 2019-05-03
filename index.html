@@ -46,8 +46,17 @@ $( function() {
     $('#temperature').text(thermostat.temp + '°C');
   });
 
-
-
+  $('#powersaving-on').on('click', function() {
+    if (thermostat.PowerSaveMode == true) {
+      thermostat.switchPSM();
+      $('#temperature').text(thermostat.temp + '°C');
+      $('#power-saving-status').text('off');
+    } else {
+      thermostat.switchPSM();
+      $('#temperature').text(thermostat.temp + '°C');
+      $('#power-saving-status').text('on');
+    }
+  });
 });
 
 </script>
