@@ -36,6 +36,11 @@ $( function() {
     $('#temperature').text(thermostat.temp + '°C');
   });
 
+  $('#temperature-down').on('click', function() {
+    thermostat.down();
+    $('#temperature').text(thermostat.temp + '°C');
+  });
+
 
 
 });
