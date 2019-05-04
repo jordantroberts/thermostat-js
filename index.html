@@ -4,7 +4,6 @@
     <title>Thermostat</title>
     <script src="./src/thermostat.js"></script>
     <link rel="stylesheet" href="skeleton.css">
-
   </head>
   <body>
     <section>
@@ -23,15 +22,16 @@
     </section>
 
     <section>
-    <h1>Current weather: <span id="current-weather">20</span></h1>
+    <h4>Current weather where you are: <span id="current-weather">20</span>°C</h1>
+    <h5>Please select your city:</h2>
     <select id="current-city">
       <option value="london">London</option>
       <option value="newyork">New York</option>
       <option value="paris">Paris</option>
       <option value="tokyo">Tokyo</option>
+      <option value="berlin">Berlin</option>
     </select>
   </section>
-
   </body>
 </html>
 
@@ -73,15 +73,14 @@ $( function() {
 
   $.get('http://api.openweathermap.org/data/2.5/weather?q=London&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
   $('#current-weather').text(data.main.temp);
-});
+  });
 
   $('#current-city').change(function() {
-  var city = $('#current-city').val();
-  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+
+    var city = $('#current-city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
     $('#current-weather').text(data.main.temp)
-  })
-})
-
+    });
+  });
 });
-
 </script>
