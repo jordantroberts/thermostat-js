@@ -43,9 +43,10 @@ Thermostat.prototype.up = function(){
     return this.PowerSaveMode = !this.PowerSaveMode;
   };
 
-  // this function needs fixing.
   Thermostat.prototype._changeMaxLimit = function() {
-    if (this.powerSaveMode === false) { return this.MAX_LIMIT_PSM = 32; }
+    if (this.powerSaveMode === false) { 
+      return this.MAX_LIMIT_PSM = 32;
+    }
       this.MAX_LIMIT_PSM = 25;
   };
 
