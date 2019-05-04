@@ -1,6 +1,6 @@
 # Thermostat
 
-A Makers Academy Week 5 weekly challenge, to help us to learn a new language (Javascript). The task was to test drive a simple front-end web app using Javascript, with the specification below.
+A Makers Academy Week 5 weekly challenge, to help us to learn a new language (Javascript). The task was to test drive a simple front-end web app using Javascript, with the specification below. It uses a weather API to check the weather of your current location, so that you can adjust your thermostat accordingly.
 
 ## Specification
 Specification:
@@ -32,7 +32,7 @@ Specification:
 4. Introduced to Ajax and Jquery
 5. How to encapsulate behaviour in Javascript
 6. How to test and debug in multiple languages
-7. Following the flow of control over the whole web app cycle. 
+7. Following the flow of control over the whole web app cycle.
 
 ## Testing this program
 
