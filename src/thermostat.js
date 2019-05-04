@@ -39,15 +39,18 @@ Thermostat.prototype.up = function(){
   };
 
   Thermostat.prototype.switchPSM = function(){
+    this.PowerSaveMode = !this.PowerSaveMode;
     this._changeMaxLimit();
-    return this.PowerSaveMode = !this.PowerSaveMode;
+    if (this.temp > this.maxTemp) {
+      this.temp = this.maxTemp;
+    } else { this.temp = this.temp }
   };
 
   Thermostat.prototype._changeMaxLimit = function() {
     if (this.powerSaveMode === false) {
-      return this.MAX_LIMIT_PSM = 32;
+      return this.maxTemp= 32;
     }
-      this.MAX_LIMIT_PSM = 25;
+      this.maxTemp = 25;
   };
 
   Thermostat.prototype.energyUsage = function() {
